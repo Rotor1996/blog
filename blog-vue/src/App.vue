@@ -1,8 +1,8 @@
 <template>
   <div class="app">
-    <nav-header v-if="$route.meta.keepAlive"></nav-header>
+    <nav-header v-if="$route.meta.tabbar"></nav-header>
     <router-view />
-    <nav-footer v-if="$route.meta.keepAlive"></nav-footer>
+    <nav-footer v-if="$route.meta.tabbar"></nav-footer>
   </div>
 </template>
 

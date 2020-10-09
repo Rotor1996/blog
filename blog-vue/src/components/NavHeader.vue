@@ -3,7 +3,8 @@
     <div class="logo">小江的树洞</div>
     <div class="menu">
       <a v-for="(item,index) in menu"
-         :key="index">
+         :key="index"
+         @click="go(item.name)">
         <span :class="name == item.name ? 'pitch-on':''">{{item.title}}</span>
         <el-divider direction="vertical"></el-divider>
       </a>
@@ -50,6 +51,14 @@ export default {
   watch: {},
   computed: {},
   methods: {
+    go (name) {
+      this.name = name
+      if (name != this.name) {
+        this.$router.push({
+          name
+        })
+      }
+    }
   },
   created () { },
   mounted () { }
