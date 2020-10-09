@@ -9,7 +9,8 @@
         <div class="index">
           <button class="button"
                   type="button"
-                  data-hover="MINECRAFT"><span>ENTRANCE</span></button>
+                  data-hover="MINECRAFT"
+                  @click="go()"><span>ENTRANCE</span></button>
         </div>
       </div>
     </div>
@@ -27,7 +28,13 @@ export default {
   },
   watch: {},
   computed: {},
-  methods: {},
+  methods: {
+    go () {
+      this.$router.push({
+        name: 'Record'
+      })
+    }
+  },
   created () { },
   mounted () { }
 }
