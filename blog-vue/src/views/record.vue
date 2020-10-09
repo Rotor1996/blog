@@ -1,5 +1,8 @@
 <template>
   <div class="record">
+    <div class="header">
+
+    </div>
     <div class="block">
       <el-timeline>
         <el-timeline-item v-for="(list,index) in 5"
@@ -52,9 +55,6 @@ export default {
     margin: 10px;
     /deep/ .el-pagination.is-background .el-pager li:not(.disabled).active {
       background-color: @colorB;
-    }
-    /deep/ .el-pagination.is-background .el-pager li:not(.disabled):hover {
-      color: @colorB;
     }
   }
 }

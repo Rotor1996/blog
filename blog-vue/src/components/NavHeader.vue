@@ -2,20 +2,13 @@
   <div class="NavHeader">
     <div class="logo">小江的树洞</div>
     <div class="menu">
-      <span>生</span>
-      <el-divider direction="vertical"></el-divider>
-      <span>活</span>
-      <el-divider direction="vertical"></el-divider>
-      <span>阅</span>
-      <el-divider direction="vertical"></el-divider>
-      <span>游</span>
-      <el-divider direction="vertical"></el-divider>
-      <span>她</span>
-      <el-divider direction="vertical"></el-divider>
-      <span>💡</span>
+      <a v-for="(item,index) in menu"
+         :key="index">
+        <span :class="name == item.name ? 'pitch-on':''">{{item.title}}</span>
+        <el-divider direction="vertical"></el-divider>
+      </a>
     </div>
   </div>
-
 </template>
 
 <script>
@@ -25,6 +18,33 @@ export default {
   props: {},
   data () {
     return {
+      name: this.$route.name,
+      menu: [
+        {
+          name: 'Record',
+          title: '记录'
+        },
+        {
+          name: 'Project',
+          title: '项目'
+        },
+        {
+          name: 'Viewing',
+          title: '观影读书'
+        },
+        {
+          name: 'Game',
+          title: '游戏'
+        },
+        {
+          name: 'MyLove',
+          title: '和她'
+        },
+        {
+          name: 'Idea',
+          title: '💡'
+        },
+      ]
     }
   },
   watch: {},
@@ -50,6 +70,14 @@ export default {
     padding-right: 1em;
     span {
       padding: 1em;
+      cursor: pointer;
+    }
+    span:hover {
+      color: @colorC;
+    }
+    .pitch-on {
+      color: @colorA;
+      cursor: default;
     }
   }
 }
