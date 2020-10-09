@@ -2,12 +2,17 @@
   <div class="NavHeader">
     <div class="logo">小江的树洞</div>
     <div class="menu">
-      <a>生</a>
-      <a>活</a>
-      <a>阅</a>
-      <a>游</a>
-      <a>她</a>
-      <a>💡</a>
+      <span>生</span>
+      <el-divider direction="vertical"></el-divider>
+      <span>活</span>
+      <el-divider direction="vertical"></el-divider>
+      <span>阅</span>
+      <el-divider direction="vertical"></el-divider>
+      <span>游</span>
+      <el-divider direction="vertical"></el-divider>
+      <span>她</span>
+      <el-divider direction="vertical"></el-divider>
+      <span>💡</span>
     </div>
   </div>
 
@@ -38,12 +43,13 @@ export default {
   .logo {
     line-height: 100px;
     font-size: @fontC;
+    padding-left: 1em;
   }
   .menu {
     line-height: 100px;
-    a {
-      cursor: pointer;
-      padding: 0 1em;
+    padding-right: 1em;
+    span {
+      padding: 1em;
     }
   }
 }
