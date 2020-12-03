@@ -2,9 +2,11 @@
   <div class="NavHeader">
     <div class="logo">小江的树洞</div>
     <div class="menu">
-      <a v-for="(item,index) in menu"
-         :key="index"
-         @click="go(item.name)">
+      <a
+        v-for="(item,index) in menu"
+        :key="index"
+        @click="go(item.name)"
+      >
         <span :class="name == item.name ? 'pitch-on':''">{{item.title}}</span>
         <el-divider direction="vertical"></el-divider>
       </a>
@@ -20,6 +22,8 @@ export default {
   data () {
     return {
       name: this.$route.name,
+      // name: '',
+      data: 1,
       menu: [
         {
           name: 'Record',
@@ -52,8 +56,8 @@ export default {
   computed: {},
   methods: {
     go (name) {
-      this.name = name
       if (name != this.name) {
+        this.name = name
         this.$router.push({
           name
         })
@@ -70,12 +74,12 @@ export default {
   justify-content: space-between;
   font-family: "SemiBold";
   .logo {
-    line-height: 100px;
+    line-height: 8rem;
     font-size: @fontC;
     padding-left: 1em;
   }
   .menu {
-    line-height: 100px;
+    line-height: 8rem;
     padding-right: 1em;
     span {
       padding: 1em;
