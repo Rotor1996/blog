@@ -7,10 +7,12 @@
         <p>我在这里记录我的生活 🙂</p>
         <p>很高兴认识你！</p>
         <div class="index">
-          <button class="button"
-                  type="button"
-                  data-hover="MINECRAFT"
-                  @click="go()"><span>ENTRANCE</span></button>
+          <button
+            class="button"
+            type="button"
+            data-hover="MINECRAFT"
+            @click="go()"
+          ><span>ENTRANCE</span></button>
         </div>
       </div>
     </div>
