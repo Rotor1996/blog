@@ -1,6 +1,6 @@
 <template>
   <div class="Project">
-    <el-row :gutter="100">
+    <el-row :gutter="50">
       <el-col
         :span="6"
         v-for="(list,index) in 8"
@@ -10,7 +10,10 @@
           class="item-content"
           style="background-image: url('https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png');"
         >
-          <el-tag>123</el-tag>
+          <div class="tag">分类</div>
+          <div class="tag">项目名称</div>
+          <div class="tag">使用技术</div>
+          <div class="tag">时间/进度</div>
         </div>
       </el-col>
     </el-row>
@@ -24,7 +27,8 @@ export default {
   props: {},
   data () {
     return {
-      list: []
+      list: [],
+      dialogTableVisible: true
     }
   },
   watch: {},
@@ -36,16 +40,26 @@ export default {
 </script>
 <style lang="less" scoped>
 .Project {
-  position: static;
+  // position: static;
   padding: 40px;
   .el-col {
     margin-bottom: 20px;
-    height: 100px;
   }
   .item-content {
     height: 300px;
     background-size: 100% 100%;
     background-repeat: no-repeat;
+    border-radius: 4px;
+    .tag {
+      width: fit-content;
+      width: -webkit-fit-content;
+      width: -moz-fit-content;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 4px 10px;
+      color: #ffffff;
+      transition: all 0.3s ease-in-out;
+      margin: 5px 10px;
+    }
   }
 }
 </style>
