@@ -36,6 +36,7 @@ export default {
   props: {},
   data () {
     return {
+      list: []
     }
   },
   watch: {},
