@@ -10,6 +10,14 @@
         <span :class="name == item.name ? 'pitch-on':''">{{item.title}}</span>
         <el-divider direction="vertical"></el-divider>
       </a>
+      <el-input
+        class="search-input"
+        placeholder="请输入内容"
+        prefix-icon="el-icon-search"
+        v-model="searchContent"
+      >
+      </el-input>
+
     </div>
   </div>
 </template>
@@ -43,13 +51,14 @@ export default {
         },
         {
           name: 'MyLove',
-          title: '和她'
+          title: '每一天'
         },
         {
           name: 'Idea',
           title: '💡'
         },
-      ]
+      ],
+      searchContent: ""
     }
   },
   watch: {},
@@ -92,6 +101,12 @@ export default {
       color: @colorA;
       cursor: default;
     }
+    .search-input {
+      width: auto;
+    }
+  }
+  .el-icon-search {
+    padding: 1em;
   }
 }
 </style>

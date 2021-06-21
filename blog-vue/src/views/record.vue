@@ -48,14 +48,14 @@
       </el-timeline> -->
     </div>
     <div class="pagination">
-      <el-pagination
+      <!-- <el-pagination
         background
         :page-size="pagesSize"
         :pager-count="3"
         layout="prev, pager, next"
         :total="100"
       >
-      </el-pagination>
+      </el-pagination> -->
     </div>
   </div>
 

@@ -31,7 +31,7 @@ export default {
   justify-content: space-between;
   background-color: @colorB;
   color: @colorG;
-  margin-bottom: 5px;
+  // margin-bottom: 5px;
   .motto {
     line-height: 100px;
     font-family: "SemiBold";
